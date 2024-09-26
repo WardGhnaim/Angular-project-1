@@ -1,0 +1,220 @@
+
+
+  
+.secondrydiv {
+    background-color: #ececec;
+    box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
+    margin: auto;
+    border-radius: 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-list.left {
+    margin-left: 0;
+}
+
+.navbar-list.right {
+    margin-right: 0;
+}
+
+.navbar-list li {
+    margin: 0 10px;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bill-icon {
+    background-image: url('https://www.svgrepo.com/show/535206/bell.svg'); /* Replace with your bill icon URL */
+}
+
+.profile-icon {
+    background-image: url('https://www.svgrepo.com/show/512729/profile-round-1342.svg'); /* Replace with your profile icon URL */
+}
+
+blockquote {
+    color: darkslategray;
+    border: 10px solid #004d00;
+    padding: 1em;
+}
+
+p#lol {
+    color: red;
+}
+
+img.hello {
+    display: block;
+}
+
+.newreq {
+    margin-left: auto;
+    margin-right: auto;
+    border: #005c11;
+    background-color: #005c11;
+    padding: 4px 12px;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.hello {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.maindiv {
+    align-content: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.information {
+    background: #f0f0f0;
+}
+
+.slider-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.control-btn {
+    background-color: #005c11;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.control-btn:hover {
+    background-color: #005c11;
+}
+
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #005c11;
+}
+
+.select-all-container {
+    display: flex;
+    align-items: center;
+}
+
+.Card{
+    min-width: 250px;
+     max-height: 350px;
+}
+.innn{
+     display: inline-flex;
+}
+.immm{
+    width: 50px;
+    height: 50px;
+}
+.H{
+    display: grid; grid-template-columns: 50% 1fr 1fr;
+}
+.proCont{
+    display: grid; grid-template-columns: repeat(4, 2fr);
+}
+.profileCont{
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+}
+@media only screen and (max-width: 650px) {
+    .H{
+        display: block;
+        max-width: 500px;
+    }
+    .Card{
+    width: 250px;
+    height: 350px;
+}
+    .innn{display:block ;}
+    .immm{
+    width: 100px;
+    height: 100px;
+    }
+    .proCont{
+        display: grid; grid-template-columns: repeat(2, 1fr);
+    }
+    .profileCont{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
