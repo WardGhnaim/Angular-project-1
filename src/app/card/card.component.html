@@ -1,0 +1,39 @@
+<div class="card" style="border-radius: 0px;" >
+    <div style="display: flex; flex-direction: column;" class="header-cont">
+      <div class="head">
+        <img src="assets/download.jpg" alt="Card Image" class="card-image" style="border: 1px solid rgb(193, 193, 193);">
+        <h5 class="card-name" style="display: inline-block; margin-bottom: 10px; font-weight: 500;" [innerHTML]="data.name | highlight: searchText"></h5> 
+  
+        <span class="SBox" style="height: 15px; width: 15px; border: 1px solid black; align-items: center; justify-content: center; float: right;"   >
+          <button (click)="toggleSellection()" style="padding: 0%; border: 1px solid ;" >
+            <i class="bi bi-check" style="margin: 0%;" [ngClass]="{'hidden': _selected}"></i>
+          </button>
+        </span>
+      </div>
+      
+      <div class="c-body">
+        <div class="card-detail" style="margin: 0%;">
+          <p class="detail-title">Submitted on:</p>
+          <strong style="font-weight: 500;">{{ data.date | date:'MM/dd/yyyy' }}</strong>
+        </div>
+        <div class="card-detail" style="margin: 0%;">
+          <p class="detail-title">Duration:</p>
+          <strong style="font-weight:500;" [innerHTML]="(data.duration + ' (' + data.durationStart + ' - ' + data.durationEnd + ')') | highlight: searchText"></strong>
+        </div>
+        <div class="card-detail salary" style="margin: 0%;">
+          <p class="detail-title">Salary:</p>
+          <strong style="font-weight: 500;" [innerHTML]="data.salary | highlight: searchText"></strong>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-right: 10px;" class="bts">
+      <button class="approveBtn" style="font-size: small;">Approve</button>
+      <button class="declineBtn" style="font-size: small;">Decline</button>
+    </div>  
+    <div class="CAt">
+      <p style="margin: 0%; font-size: small;">Currently at:</p>
+      <strong style="font-weight: 500; color: green; margin: 0%;">Omar Ahmad</strong>
+    </div>
+  </div>
+  

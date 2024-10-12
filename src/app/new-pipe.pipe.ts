@@ -1,11 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'newPipe',
+  name: 'highlight',
   standalone: true
 })
 export class NewPipePipe implements PipeTransform {
-  transform(num: number): number {
-    return num * 24;
+  transform(value: string, searchText: string): string {
+    if (!searchText) {
+      return value;
+    }
+    const re = new RegExp(searchText, 'gi');
+    return value.replace(re, (match) => `<mark>${match}</mark>`);
   }
 }

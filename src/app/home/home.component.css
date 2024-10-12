@@ -1,0 +1,77 @@
+
+
+blockquote {
+    color: darkslategray;
+    border: 10px solid rgb(0, 121, 58,1);
+    padding: 1em;
+}
+
+p#lol {
+    color: red;
+}
+
+img.hello {
+    display: block;
+}
+
+.newreq {
+    margin-left: auto;
+    margin-right: auto;
+    border: rgb(0, 121, 58,1);
+    background-color: rgb(0, 121, 58,1);
+    padding: 4px 12px;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.hello {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.maindiv {
+    align-content: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.information {
+    background: #f0f0f0;
+}
+
+.homePage{
+    display: inline-block;
+    height: 100%;
+    width: 200%;
+}
+.HomePage{
+    width: 100%;  display: grid; grid-template-columns: 50% 1fr 1fr; 
+}
+.pageC{
+    display: inline-table;
+}
+
+@media only screen and (max-width: 1100px) {
+   
+    .homePage{
+        display: block;
+        width: 100%;
+    }
+    .HomePage{
+        width: 100%;  display: block; 
+    }
+    .pageC{
+        
+        display: block;
+    }
+    .F{
+        font-size: 50px;
+    }
+}
+
+  
+  
+  

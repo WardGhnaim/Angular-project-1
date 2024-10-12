@@ -1,0 +1,73 @@
+<div class="secondrydiv " style="margin-bottom: 20px;" >
+                
+    <div class="profile-content">
+        <div style="display: flex; align-items: center; display: inline-block;">
+            <img [src]="employee?.imageURL" alt="" style="width: 100px; height: 100px;border: 1px solid rgb(193, 193, 193); border-radius: 50%; padding: 5px; margin-bottom: 50px; ">
+            <div style="margin-left: 10px; display: inline-block; ">
+              <!--interpolation data binding-->
+                <h4 style="margin: 0;">{{employee?.name}}</h4>
+                <p style="margin: 0;">{{employee?.department}}</p>
+                <p style="margin: 0; color: #a7a7a7;">{{employee?.position}}</p>
+            </div>
+        </div>
+    
+        
+        <div style="margin: 15px; float: right; " class="newReq">
+            <div style="text-align: end; " ><a href="#" class="newreq" style=" border-radius: 5px; margin-left: 30px;  " >New Request</a></div>
+        </div>
+    </div>
+    <div >
+        <div style=" gap: 5px; " class="profileCont">
+            <div style="display: flex; align-items: left; justify-content: left;    box-sizing: border-box;">
+                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
+                    
+                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-person-fill" style="font-size: xxx-large; display: inline-block; margin: 10px; color: gray;"></i></div>
+                    <div style="display: inline-block;">     
+                        <h6 style="font-weight:large; margin: auto;"><strong>Reporting To:</strong></h6><p style="margin: auto;">{{employee?.reportingToName}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="display: flex; align-items: left; justify-content: left;   box-sizing: border-box;">
+                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
+                    
+                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-graph-up"style="font-size: xxx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
+                    <div style="display: inline-block;">     
+                        <h6 style="font-weight:large; margin: auto;"><strong>Corporate Level:</strong></h6><p style="margin: auto;">Level {{employee?.corporateLevel}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="display: flex; align-items: left; justify-content: left; box-sizing: border-box;">
+                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
+                    
+                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-hourglass-split"style="font-size: xxx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
+                    <div style="display: inline-block;">     
+                        <h6 style="font-weight:large; margin: auto;"><strong>Lifetime:</strong></h6><p style="margin: auto;">{{employee?.Lifetime}} Years</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="display: flex; align-items: left; justify-content: left; box-sizing: border-box;">
+                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
+                    
+                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-luggage"style="font-size: xxx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
+                    <div style="display: inline-block;">     
+                        <h6 style="font-weight:large; margin: auto;"><strong>Vacation Days Left:</strong></h6><p style="margin: auto;">{{employee?.vacationDaysLeft}} Days</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="display: flex; align-items: left; justify-content: left; box-sizing: border-box;">
+                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
+                    
+                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-hospital"style="font-size: xxx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
+                    <div style="display: inline-block;">     
+                        <h6 style="font-weight:large; margin: auto;"><strong>Sick Days Left:</strong></h6><p style="margin: auto;">{{employee?.sickDaysLeft}} Days</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+
+<app-card 
+  *ngFor="let card of visibleCards" 
+  [data]="{
+    id: card.id,
+    name: card.name | highlight: searchTerm,
+    date: card.date,
+    duration: card.duration | highlight: searchTerm,
+    durationStart: card.durationStart,
+    durationEnd: card.durationEnd,
+    salary: card.salary | highlight: searchTerm
+  }"
+  (selectedChange)="handleSelectionChange($event)"
+  [ngClass]="{'selected-card': selectedCardIds.includes(card.id)}"
+  class="c" 
+  style="display: inline;">
+</app-card>

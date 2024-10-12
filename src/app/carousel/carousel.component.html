@@ -1,0 +1,18 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin: auto; margin-bottom: 10px; box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);">
+    <div class="carousel-inner">
+      <div *ngFor="let item of newsItems; let i = index" class="carousel-item" [class.active]="i === 0">
+        <img class="d-block w-100" [src]="item.imageUrl" alt="Slide image" style="max-height: 220px;">
+        <div class="carousel-caption caption-right">
+          <h5 style="color: black; font-size: large;">{{ item.title }}</h5>
+          <p style="color: black; font-size: small;">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+</div>
+    <!-- Carousel indicators -->
+<div style="text-align: center; margin-bottom: 100px;">
+    <button *ngFor="let item of newsItems; let i = index" type="button" data-bs-target="#carouselExampleIndicators" [attr.data-bs-slide-to]="i" class="bt" [class.active]="i === 0" aria-current="true" [attr.aria-label]="'Slide ' + (i + 1)" style="padding: 0%; width: 9px; height: 9px; border-radius: 100%; margin: 3px; border-width: 0px;">
+    </button>
+</div>
+    
+  

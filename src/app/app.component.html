@@ -1,494 +1,93 @@
 <style>
-  .highlight {
-  background-color: yellow; 
-  font-weight: bold; 
-}
-
-  .maindiv {
-    align-content: center;
-    margin: auto;
-    padding: 5%;
-}
-  .secondrydiv {
-      background-color: #ececec;
-      box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
-      margin: auto;
-      border-radius: 15px;
+  .nav{
+    font-weight: bold;
   }
-
-  
   .navbar {
-      background-color: #005c11; 
-      margin: auto;
-    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgb(0, 121, 58, 1); 
+    padding: 0;
+    height: auto; 
   }
 
   .navbar-list {
-      list-style: none;
-      margin-left: 20px;
-      margin-right: 20px;
-      padding: 0;
-      display: flex;
-      
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1; 
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .navbar-list.left {
+    justify-content: flex-start; 
+    
+  }
+
+  .navbar-list.right {
+    justify-content: flex-end; 
   }
 
   .navbar-list li {
-      margin: 0 10px;
+    text-align: center;
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-list li:hover {
+    background-color: rgb(0, 108, 34);
   }
 
   .navbar-list a {
-      text-decoration: none;
-      color: white; /* White text for better visibility */
-      font-size: 16px;
+    text-decoration: none;
+    color: white; 
+    font-size: 16px;
+    display: block; 
   }
 
   .icon {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      background-size: contain;
-      background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
-  .proCont{
-    display: grid; grid-template-columns: repeat(4, 2fr);
-}
-.profileCont{
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr);
-}
-.secondrydiv {
-    background-color: #ececec;
-    box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
-    margin: auto;
-    border-radius: 15px;
-    padding: 20px;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 15%;
-}
-
-.header-icon {
-    font-size: 65px;
-    margin-left: 10px;
-    color: #005c11;
-}
-
-.header-text {
-    margin: 0;
-    margin-left: 10px;
-}
-
-.divider {
-    border: 1px solid #5f5f5f;
-    margin: 5px 0;
-}
-
-.history-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 10px;
-}
-
-.vacation-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
-}
-
-.view-more-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.view-more-link {
-    color: #005c11;
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 5px;
-}
-.secondrydiv {
-    background-color: #ececec;
-    box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
-    margin: 20px auto;
-    border-radius: 15px;
-    padding: 20px;
-    width: 90%;
-}
-
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-
-.header-title-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-icon {
-    font-size: 65px;
-    color: #005c11;
-    margin-right: 10px;
-}
-
-.header-title {
-    margin: 0;
-}
-
-
-.view-more-link {
-    color: #005c11;
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-
-.divider {
-    border: 1px solid #848484;
-    margin: 10px 0;
-}
-
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
-}
-
-
-.card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 1px 2px 2px 1px rgb(148, 148, 148);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.03); 
-}
-
-
-.card-header {
-    text-align: center;
-}
-
-.card-image {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 10px auto;
-}
-
-.card-name {
-    margin-top: 10px;
-    font-size: medium;
-}
-
-
-.card-body {
-    text-align: left;
-}
-
-.card-detail {
-    margin-bottom: 10px;
-}
-
-.detail-title {
-    color: #878787;
-    font-size: small;
-    font-weight: 100;
-    margin: 0;
-}
-
-
-.card-footer {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.declineBtn, .approveBtn {
-    border-radius: 10px;
-    padding: 5px 5px;
-    margin: 5px;
-}
-
-.declineBtn {
-    color: #005c11;
-    background-color: white;
-    border: 1px solid #005c11;
-}
-
-.approveBtn {
-    background-color: #005c11;
-    color: white;
-    border: none;
-}
-
-
-@media (max-width: 1200px) {
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .history-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-    
-}
-.profileCont{
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr);
-}
-}
-
-@media (max-width: 576px) {
-    .card-grid {
-        grid-template-columns: repeat(1, 1fr); 
-    }
-
-}
-
+  @media (max-width: 700px) {
+    .navbar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex: 1; 
+      padding-left: 0px;
+    }  
+  }
 </style>
 
 <nav>
   <div class="navbar">
-      <ul class="navbar-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="profile.html"><strong>Profiles</strong></a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">Settings</a></li>
-      </ul>
-      <ul class="navbar-list">
-        <!-- fontawesome icon use-->
-          <li><a href="#"><i class="fa-regular fa-bell"></i></a></li>
-          
-          <li><a href="#"><i class="bi bi-person icon" style="font-size: 20px;"></i></a></li>
-      </ul>
+    <!-- Left Navbar List -->
+    <ul class="navbar-list left">
+      <li><a [routerLink]="'/Home'" routerLinkActive="nav" id="home">Home</a></li>
+      <li><a [routerLink]="'/Profile'" routerLinkActive="nav">Profiles</a></li>
+      <li><a [routerLink]="'/Reports'" routerLinkActive="nav">Reports</a></li>
+      <li><a [routerLink]="'/Settings'" routerLinkActive="nav">Settings</a></li>
+    </ul>
+
+    <!-- Right Navbar List -->
+    <ul class="navbar-list right">
+      <li><a [routerLink]="'/Notifications'" routerLinkActive="nav"><i class="fa-regular fa-bell" style="font-size: 22px; margin-left: 3px; margin-right: 3px; margin-top: 6px;"></i></a></li>
+      <li><a [routerLink]="'/Sittings'" routerLinkActive="nav"><i class="bi bi-person icon" style="font-size: 22px; margin-left: 3px; margin-right: 3px;"></i></a></li>
+    </ul>
   </div>
 </nav>
 
 
 
-<div class="maindiv">
-    
-  <div class="secondrydiv " style="margin-bottom: 20px;" >
-              
-    <div>
-        <div style="display: flex; align-items: center; display: inline-block; ">
-            <img src="assets\download.png" alt="" style="width: 70px; height: 70px; border-radius: 50%; padding: 5px; margin-bottom: 50px; ">
-            <div style="margin-left: 10px; display: inline-block; ">
-              <!--interpolation data binding-->
-                <h4 style="margin: 0;">{{name}}</h4>
-                <p style="margin: 0;">Marketing Department</p>
-                <p style="margin: 0; color: #a7a7a7;">Junior Accounting Officer</p>
-            </div>
-        </div>
-    
-        
-        <div style="margin: 15px; float: right;">
-            <div style="text-align: end;" ><a href="#" class="newreq " style=" border-radius: 5px; margin-left: 30px;" >New Request</a></div>
-        </div>
-    </div>
-    <div>
-        <div style=" gap: 10px; padding: 10px;" class="profileCont">
-            <div style="display: flex; align-items: center; justify-content: center;   padding: 20px; box-sizing: border-box;">
-                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
-                    
-                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-person-fill" style="font-size: xx-large; display: inline-block; margin: 10px; color: gray;"></i></div>
-                    <div style="display: inline-block;">     
-                        <h6 style="font-weight:large; margin: auto;"><strong>Reporting To:</strong></h6><p style="margin: auto;">Salwa Assem</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;   padding: 20px; box-sizing: border-box;">
-                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
-                    
-                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-graph-up"style="font-size: xx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
-                    <div style="display: inline-block;">     
-                        <h6 style="font-weight:large; margin: auto;"><strong>Corporate Level:</strong></h6><p style="margin: auto;">Level 10</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;   padding: 20px; box-sizing: border-box;">
-                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
-                    
-                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-hourglass-split"style="font-size: xx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
-                    <div style="display: inline-block;">     
-                        <h6 style="font-weight:large; margin: auto;"><strong>Life Time:</strong></h6><p style="margin: auto;">2.5 Years</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;  padding: 20px; box-sizing: border-box;">
-                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
-                    
-                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-luggage"style="font-size: xx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
-                    <div style="display: inline-block;">     
-                        <h6 style="font-weight:large; margin: auto;"><strong>Vacation Days Left:</strong></h6><p style="margin: auto;">10 Days</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;   padding: 20px; box-sizing: border-box;">
-                <div style="align-content: center; display: inline-block;" class="d-flex align-items-center">
-                    
-                    <div style="display: inline-block; vertical-align: middle;"><i class="bi bi-hospital"style="font-size: xx-large; display: inline-block; margin: 10px; color: gray; "></i></div>
-                    <div style="display: inline-block;">     
-                        <h6 style="font-weight:large; margin: auto;"><strong>Sick Days Left:</strong></h6><p style="margin: auto;">14 Days</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div> 
-    </div>
-  </div>
+
+<router-outlet></router-outlet>
 
 
 
-  <div class="secondrydiv">
-    
-      <div class="header-container"  >
-        <i class="bi bi-card-checklist header-icon"></i>
-        <h6 class="header-text" style="display: inline;">History</h6>
-    
-    <!--two way data binding-->
-    <div class="header-container" style="display: inline-block; margin: auto; margin-left: 50%; "><input [(ngModel)]="userInput" placeholder="Enter Days Number" /></div>
-    
-    </div>
-    <hr class="divider">
-    
-    
-    <!-- Main container for the history items -->
-    <div class="history-container">
-        <!-- Each vacation card -->
-        <div class="vacation-card">
-            <h6>Annual Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        <div class="vacation-card">
-            <h6>Sick Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        <div class="vacation-card">
-            <h6>Annual Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        <div class="vacation-card">
-            <h6>Non Paid Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        
-        <div class="vacation-card">
-            <h6>Annual Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        <div class="vacation-card">
-            <h6>Non Paid Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-        <div class="vacation-card">
-            <h6>Sick Vacation</h6>
-            <p>2/3/2023 - 10/3/2023 </p>
-            <!--custom pipe use-->
-            <p><strong>{{ userInput }} days / {{userInput | newPipe}} hours</strong></p>
-            <p>Approved by: Hazem Azmi</p>
-        </div>
-    </div>
-
-    
-    <div class="view-more-container">
-        <a href="#" class="view-more-link">View More ></a>
-    </div>
-</div>
-
-
-
-
-
-<div class="secondrydiv">
-  
-  <div class="header-container">
-      <div class="header-title-container">
-          <i class="bi bi-card-checklist header-icon"></i>
-          <h6 class="header-title">Pending Requests</h6>
-      </div>
-      <button (click)="toggleVariable()" style="margin-left: 50%; border-radius: 20%; border-color: #005c11; ">
-        @if (isTrue) {Hide Cards}
-        @else {Show Cards}
-      </button>
-  </div>
-
-  <hr class="divider">
-
-  <!--card component section-->
-
-  <div [class]="classandstyle">
-    <!--condationally display-->
-    @if(isTrue == true){
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-  
-    }
-
-      
-  </div>
-  <div class="view-more-container">
-    <a href="#" class="view-more-link">View More ></a>
-  </div>
-</div>
-
-
-
-</div>
